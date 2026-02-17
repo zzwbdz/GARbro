@@ -149,8 +149,8 @@ namespace GameRes.Formats.Silky
                 }
                 catch (Exception X)
                 {
-                    // 修复点：此处改用硬编码字符串或尝试 MsgFileError
-                    throw new InvalidFileName (entry.Name, "Error opening file", X);
+                    // 修复点：修复行尾不一致
+                    throw new InvalidFileName(entry.Name, X);
                 }
             }
 
